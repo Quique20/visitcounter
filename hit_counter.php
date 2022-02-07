@@ -26,7 +26,7 @@
                 $query-> execute();
                 $result = $query -> fetch(PDO::FETCH_ASSOC);
 
-                if ($result !== TRUE){
+                if ($result == TRUE){
                     $totalVisits = 1;
                     $sql = "INSERT INTO visitas (ip,contador) VALUES (:ip, :contador)";
                     $stmt = $conn->prepare($sql);
