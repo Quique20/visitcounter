@@ -1,5 +1,5 @@
 <?php
-        $servername = '%';
+        $servername = 'mysql';
         $username = 'alumno';
         $password = 'contraseña';
         try{
