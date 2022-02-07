@@ -1,5 +1,5 @@
 <?php
-        $servername = '128.0.0.1';
+        $servername = '127.0.0.1';
         $username = 'alumno';
         $password = 'contraseña';
         try{
