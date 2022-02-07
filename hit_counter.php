@@ -1,5 +1,5 @@
 <?php
-        $servername = 'mysql';
+        $servername = 'localhost';
         $username = 'alumno';
         $password = 'contraseña';
         try{
@@ -31,7 +31,7 @@
                     $stmt->execute();
                 }else{
                     $totalVisits = $row['contador'] + 1;
-                    $sql = "UPDATE visitas SET contador=contador WHERE ip=ip";
+                    $sql = "UPDATE visitas SET contador=contador WHERE ip=:ip";
                     $stmt = $conn->prepare($sql);
                     $stmt->bindParam('ip', $visitorHashKey);
                     $stmt->bindParam('contador',$totalVisits);
