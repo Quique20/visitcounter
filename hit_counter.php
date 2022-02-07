@@ -24,7 +24,7 @@
 
                 if ($result != TRUE){
                     $totalVisits = 1;
-                    $sql = "INSERT INTO visitas (ip,cuenta) VALUES :ip, :contador ON DUPLICATE KEY UPDATE contador = :contador ; ";
+                    $sql = "INSERT INTO visitas (ip,contador) VALUES :ip, :contador ON DUPLICATE KEY UPDATE contador = :contador ; ";
                     $stmt = $conn->prepare($sql);
                     $stmt->bindParam('ip', $visitorHashKey);
                     $stmt->bindParam('contador',$totalVisits);
